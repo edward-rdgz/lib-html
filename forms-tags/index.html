@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Formularios</title>
+</head>
+<body>
+
+	<form action="proceso.php" method="POST">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<p>
+			<label for="nombre">Nombre: </label>
+			<input name="nombre" type="text" required placeholder="Juan Perez..." autofocus autocomplete="off"></p>
+		
+			<p>
+			<label for="sexo">Sexo: </label>
+			<input type="radio" name="sexo" value="1" checked>Hombre
+			<input type="radio" name="sexo" value="2">Mujer</p>
+			<p>
+			<label for="descripcion">Descripción: </label><br>
+			<textarea></textarea>
+			</p>
+
+			<p>
+			<label for="contrasena">Contraseña: </label>
+			<input type="password" name="contrasena">
+			</p>
+			<label for="transporte">Transporte: </label>
+			<select name="transporte">
+				<option value="1">Auto</option>
+				<option value="2">Autobús</option>
+				<option value="3">Avión</option>
+			</select>
+			<p>
+			<label for="correo">Correo electrónico: </label>
+			<input type="email" name="correo" disabled>
+			</p>
+			<p>
+			<label for="busqueda">Busqueda: </label>
+			<input type="search" name="busqueda">
+			</p>
+			<p>
+				<label for="edad">Edad: </label>
+				<input type="number" name="edad" min="18" max="99">
+			</p>
+			<p>
+				<label for="fecha">Fecha: </label>
+				<input type="date" name="fecha" max="2015-11-30">
+			</p>
+			<p>
+				<label for="pagina">Página web: </label>
+				<input type="url" name="pagina" readonly>
+			</p>
+			<p>
+				<label for="telefono">Telefóno: </label>
+				<input type="tel" name="telefono" required>
+			</p>
+			<p>
+				<label for="navegador">Navegador: </label>
+				<input list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist>
+			</p>
+
+			<p>
+				<label for="cp">CP: </label>
+				<input type="text" pattern="[0-9]{5}" title="Inserte un código postal valido" value="77710">
+			</p>
+
+			<p>
+				<label for="cal">Calificación: </label>
+				<input type="range" name="cal" min="0" max="100">
+			</p>
+			<button type="button" onclick="alert('Hola mundo'); ">No hacer click aquí</button>
+			<input type="submit">
+			<input type="reset">
+
+		</fieldset>
+	</form>
+	
+</body>
+</html>
